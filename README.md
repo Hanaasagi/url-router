@@ -1,24 +1,6 @@
-// export
-pub const Router = @import("router.zig").Router;
-pub const Match = @import("router.zig").Match;
-pub const Params = @import("params.zig").Params;
+# URL-Router
 
-const std = @import("std");
-const testing = std.testing;
-
-test "test all modules" {
-    _ = @import("tree.zig");
-    _ = @import("params.zig");
-    _ = @import("error.zig");
-    _ = @import("router.zig");
-
-    testing.refAllDecls(@This());
-}
-
-// --------------------------------------------------------------------------------
-//                                   Example
-// --------------------------------------------------------------------------------
-
+```zig
 const Request = struct {
     params: Params,
     method: enum { GET, POST },
@@ -84,3 +66,5 @@ test "test" {
     app.handle_request("/search");
     app.handle_request("/static/robots.txt");
 }
+
+```
