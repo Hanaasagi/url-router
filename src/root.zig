@@ -64,13 +64,14 @@ const App = struct {
 fn search_handler(request: *Request, response: *Response) void {
     _ = request;
     _ = response;
-    std.log.err("search handler is called", .{});
+    // std.log.err("search handler is called", .{});
     // ...
 }
 
 fn static_handler(request: *Request, response: *Response) void {
+    _ = request;
     _ = response;
-    std.log.err("static handler is called, name is {s}", .{request.params.get("name").?});
+    // std.log.err("static handler is called, name is {s}", .{request.params.get("name").?});
     // ...
 }
 
